@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Valentines</title>
+  <link rel="stylesheet" href="./animation-style.css">
+  <link rel="stylesheet" href="./game-style.css">
+</head>
+
+<body>
+
+
+<script>
+
+  const createBtn = (text = 'No text') => {
+      const btn = document.createElement('button');
+      btn.innerText = text;
+      document.body.appendChild(btn);
+      return btn;
+  };
+
+  function myFunction() {
+  var x = document.createElement("BUTTON");
+  var t = document.createTextNode("Click me");
+  x.appendChild(t);
+  document.body.appendChild(x);
+}
+
+  function playMyAudio(){
+    document.getElementById("myAudio").play();
+   document.getElementById("audioStatus").innerHTML="Me expressing myy feeling via this song";	 
+   
+  }
+  function pauseMyAudio(){
+    document.getElementById("myAudio").pause();
+    document.getElementById("audioStatus").innerHTML="You paused , you didnt liked it Mono ? . Waitt are you searching for earphones ..... oaky i'll wait or you can download the song from next button";
+    createBtn('Visit the song from here');
+    document.getElementById("test").style.visibility="visible";
+  }
+</script>
+
+  <!-- partial:index.partial.html -->
+  <div id="start-screen">
+    <div id="top">
+      <div class="typewriter" id="spin">
+        <h5 class="text-primary">← Press here key to play →</h5>
+        <h4>
+          ← By Love →
+        </h4>
+      </div>
+
+
+    <audio src="Love.mp3" id="myAudio"></audio>
+   <button onClick="playMyAudio()">Play Audio</button>
+   <button onClick="pauseMyAudio(); myFunction()">Pause Audio</button>
+   <!-- <button id="test">Visit here</button> -->
+   <p id="audioStatus">Click The Play Button</p>
+
+    </div>
+    <canvas id="heart">
+    </canvas>
+  </div>
+  
+
+  <div id="game-screen" hidden>
+    <div>
+      <label style="color: white;margin-left: 19%;"><i id="timer"></i></label>
+    </div>
+    <canvas width="500" height="500" id="game"></canvas>
+    <div>
+      <label style="color: white;">Score: <i id="score">0</i></label>
+      <label style="color: white;margin-left: 17%;">Last Collected: <i id="last-collected">None</i></label>
+    </div>
+  </div>
+
+  <!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="./heart-animation.js"></script>
+</body>
+
+<script src="animations.js"></script>
+<script src="game-engine.js"></script>
+
+</html>

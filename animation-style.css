@@ -1,0 +1,102 @@
+html,body {
+  background-color: black;
+  height: 100%;
+  overflow: hidden;  
+}
+
+#start-screen {
+  background-color: black;
+}
+
+#heart {
+  position: static;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0,0,0,.2);
+}
+
+#spinner {
+  position: static;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  color: white;
+}
+
+#top {
+  position: static;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  color: white;
+}
+
+@font-face {
+  font-family: computerFont;
+  src: url(Digitaltech-rm0K.otf);
+}
+
+* {
+  font-family: computerFont;
+}
+
+
+
+.loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin .6s linear infinite;
+  border-top:  solid steelblue;
+  border-bottom: solid steelblue;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.typewriter h5 {
+  text-rendering: optimizeLegibility;
+  margin: 4% 8% 0% 25%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .50em; /* Adjust as needed */
+  font-size: 1.5em!important;
+  animation:
+          typing 10s alternate-reverse  infinite ,
+          blink-caret .5s step-end infinite;
+}
+
+.typewriter h4 {
+  text-rendering: optimizeLegibility;
+  margin: 1% 8% 0% 30%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .50em; /* Adjust as needed */
+  font-size: 1.2em!important;
+  animation:
+          typing 10s alternate-reverse  infinite ,
+          blink-caret .5s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}

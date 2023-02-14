@@ -1,0 +1,15 @@
+
+#game-screen {
+    background: black;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 27%;
+}
+
+#game {
+    border: 1px solid white;
+}
+
+label {
+    font-size: 1.5em!important;
+}
